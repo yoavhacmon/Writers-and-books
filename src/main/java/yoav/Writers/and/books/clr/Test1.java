@@ -4,6 +4,7 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import yoav.Writers.and.books.beans.Author;
 import yoav.Writers.and.books.beans.Book;
@@ -13,8 +14,9 @@ import yoav.Writers.and.books.repositories.BookRepository;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+//@Component
 @RequiredArgsConstructor
+@Order(1)
 public class Test1 implements CommandLineRunner {
     private final AuthorRepository authorRepository;
     private final BookRepository bookRepository;
